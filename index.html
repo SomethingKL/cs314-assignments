@@ -1,23 +1,80 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Assignment2</title>
-	<style>
-		#INFO{
-			background-color: Aqua;
-		}
-	</style>
-  </head>
-  <body>
-	<center>
-		<!-- Body content goes here -->
-		<h1>THIS IS MY HEADER</h1>
-		<section id="INFO">
-			<h2>ABOUT ME</h2>
-			<p>Lorem ipsum is the beginning of a pseudo-Latin passage commonly used as placeholder text when a graphic designer dummies up a page layout. It's intended to show how the type will look before the copy is available. I say pseudo-Latin because though the passage contains recognizable Latin words, they don't seem to add up to anything, and some are just jabberwocky — there's no Latin word lorem, for one thing. Lorem ipsum is only the beginning, by the way. The text continues lorem ipsum dolor sit amet, consectetur, adipisci velit, etc.</p>
-			<p>In the graphic design business, nonsense filler like this is known, somewhat incongruously, as "greeking," presumably because "it's Greek to me." It was available for many years on adhesive sheets in different sizes and typefaces from a company called Letraset. In pre-desktop-publishing days, a designer would cut the stuff out with an X-acto knife and stick it on the page. When computers came along, Aldus included lorem ipsum in its PageMaker publishing software, and you now see it wherever designers are at work, including all over the Web.</p>
-		</section>
-	<center>
-  </body>
+	<head>
+		<meta charset="utf-8">
+		<title>Assignment2</title>
+		<link rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah">
+		<style>
+			body{
+				font-family: 'Gloria Hallelujah', cursive;
+			}
+			#myTopnav {
+				list-style-type: none;
+				text-align: right;
+			}
+			#info{
+				padding: 0.1cm;
+				background-color: rgba(0,255,255,0.2);
+			}
+			#foot{
+				position: absolute;
+				top: 120%;
+				width: 100%;
+				padding: 1cm;
+				background-color: rgba(0,0,135,1);
+				font-color: white;
+			}
+			#first{
+				position: absolute;
+				left: 10%;
+				top: 70%;
+				width: 350px;
+				float: left;
+				height: 250px;
+				background-color: rgba(155,155,155,0.3);
+				line-height: 200px;
+				font-size: x-large;
+			}
+			#second{
+				position: absolute;
+				left: 120%;
+				top: -15%;
+				width: 350px;
+				float: left;
+				height: 350px;
+				background-color: rgba(155,155,155,0.3);
+				line-height: 300px;
+				font-size: x-large;
+			}
+		</style>
+	</head>	
+	<body>
+		<div class="topnav" id="myTopnav">
+			<a href="#home" class="active">Home</a>
+			<a href="#RossBrandt">News</a>
+			<a href="#News">Contact</a>
+		</div>
+
+		<center>
+			<!-- Body content goes here -->
+			<h1>THIS IS MY HEADER</h1>
+			<section id="info">
+				<h2>ABOUT ME</h2>
+				<p>Lorem ipsum is the beginning of a pseudo-Latin passage commonly used as placeholder text when a graphic designer dummies up a page layout. It's intended to show how the type will look before the copy is available. I say pseudo-Latin because though the passage contains recognizable Latin words, they don't seem to add up to anything, and some are just jabberwocky — there's no Latin word lorem, for one thing. Lorem ipsum is only the beginning, by the way. The text continues lorem ipsum dolor sit amet, consectetur, adipisci velit, etc.</p>
+				<p>In the graphic design business, nonsense filler like this is known, somewhat incongruously, as "greeking," presumably because "it's Greek to me." It was available for many years on adhesive sheets in different sizes and typefaces from a company called Letraset. In pre-desktop-publishing days, a designer would cut the stuff out with an X-acto knife and stick it on the page. When computers came along, Aldus included lorem ipsum in its PageMaker publishing software, and you now see it wherever designers are at work, including all over the Web.</p>
+			</section>
+			<div>
+				<section id="first">
+					350 x 250
+				<section>
+				<section id="second">
+					350 x 350
+				<section>
+			</div>
+			<section id="foot">
+				<button type="button">Button</button>
+			<section>
+		<center>
+	</body>
 </html>
