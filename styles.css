@@ -1,3 +1,16 @@
+@keyframes animate {
+    0% {background: linear-gradient(0deg, white, blue);}
+    10% {background: linear-gradient(36deg, blue, white);}
+	20% {background: linear-gradient(72deg, blue, white);}
+	30% {background: linear-gradient(108deg, blue, white);}
+	40% {background: linear-gradient(144deg, blue, white);}
+	50% {background: linear-gradient(180deg, blue, white);}
+	60% {background: linear-gradient(216deg, blue, white);}
+	70% {background: linear-gradient(252deg, blue, white);}
+	80% {background: linear-gradient(288deg, blue, white);}
+	90% {background: linear-gradient(324deg, blue, white);}
+	100% {background: linear-gradient(360deg, blue, white);}
+}
 @font-face{
 	font-family: 'Cabin', sans-serif;
 	font-weight: normal;
@@ -42,9 +55,26 @@
 	font-color: white;
 	background: linear-gradient(red, yellow);
 }
-button:hover {
+.button:hover{
 	color: orange;
 }
-button:active {
+.button:active{
 	color: purple;
+}
+.fullscreen{
+	background-image: url("up.png");
+	height: 100vh;
+	display: flex;
+	background-size: cover;
+	justify-content: center;
+	align-items: center;
+	font-size: 40px;
+	color: red;
+}
+.fullscreen:active{
+	background-image: url("surprise.png");	
+}
+.secondTitle{
+	animation-name: animate;
+    animation-duration: 1s;
 }
