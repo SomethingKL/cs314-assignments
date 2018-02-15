@@ -1,0 +1,56 @@
+@font-face{
+	font-family: 'Cabin', sans-serif;
+	font-weight: normal;
+	font-style: normal;
+}
+.pageHeader{
+	font-family: 'Cabin', sans-serif;
+	text-align: center;
+}
+.myTopnav{
+	list-style-type: none;
+	text-align: right;
+	word-spacing: 2em;
+}
+.paragraphs{
+	background-color: rgba(0,255,255,0.2);
+	position: absolute;
+	font-family: 'Cabin', sans-serif;
+	top:10em;
+}
+.bodyTitle{
+	text-align: center
+}
+.bodyText{
+	text-align: center
+}
+.first{
+	position: absolute;
+	left: 10%;
+	top: 70%;
+	width: 350px;
+	float: left;
+	height: 250px;
+	background-color: rgba(155,155,155,0.3);
+	line-height: 200px;
+	font-size: x-large;
+}
+.second{
+	position: absolute;
+	left: 120%;
+	top: -15%;
+	width: 350px;
+	float: left;
+	height: 350px;
+	background-color: rgba(155,155,155,0.3);
+	line-height: 300px;
+	font-size: x-large;
+}
+.pageFooter{
+	position: absolute;
+	top: 120%;
+	width: 100%;
+	padding: 1cm;
+	background-color: rgba(0,0,135,1);
+	font-color: white;
+}
