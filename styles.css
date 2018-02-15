@@ -24,27 +24,14 @@
 .bodyText{
 	text-align: center
 }
-.first{
+.gallery{
 	position: absolute;
-	left: 10%;
-	top: 70%;
-	width: 350px;
-	float: left;
-	height: 250px;
-	background-color: rgba(155,155,155,0.3);
-	line-height: 200px;
-	font-size: x-large;
+	display: flex;
+	flex-wrap: wrap;
+	top: 440px;
 }
-.second{
-	position: absolute;
-	left: 120%;
-	top: -15%;
-	width: 350px;
-	float: left;
-	height: 350px;
-	background-color: rgba(155,155,155,0.3);
-	line-height: 300px;
-	font-size: x-large;
+.picture{
+	width: 25%;
 }
 .pageFooter{
 	position: absolute;
@@ -53,4 +40,11 @@
 	padding: 1cm;
 	background-color: rgba(0,0,135,1);
 	font-color: white;
+	background: linear-gradient(red, yellow);
+}
+button:hover {
+	color: orange;
+}
+button:active {
+	color: purple;
 }
