@@ -55,11 +55,12 @@
 	margin-bottom: 15px;
 }
 .bodyBox {
-	width: 30%;
+	width: 33%;
 	text-align: center;
-	position: relative;
+	display: inline-block;
 	font-size: 5em;
 	top:0.5em;
+	box-sizing: border-box;
 }
 .bodyText {
 	font-family: 'cabinregular', sans-serif;
@@ -72,6 +73,11 @@
 	font-size: 15px;
 	padding:5px;
 	margin-bottom: 15px;
+}
+@media only screen and (max-width: 768px) {
+    .bodyBox {
+        width:100%;
+    }
 }
 
 .myTopnav{
