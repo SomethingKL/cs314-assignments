@@ -58,9 +58,12 @@
 	width: 33%;
 	text-align: center;
 	display: inline-block;
-	font-size: 5em;
 	top:0.5em;
 	box-sizing: border-box;
+}
+#bodyIcon {
+	font-size: 5em;
+	margin-top: 15px;
 }
 .bodyText {
 	font-family: 'cabinregular', sans-serif;
@@ -78,63 +81,4 @@
     .bodyBox {
         width:100%;
     }
-}
-
-.myTopnav{
-	list-style-type: none;
-	text-align: right;
-	word-spacing: 2em;
-}
-.paragraphs{
-	background-color: rgba(0,255,255,0.2);
-	position: absolute;
-	font-family: 'Cabin', sans-serif;
-	top:10em;
-}
-.bodyTitle{
-	text-align: center
-}
-.bodyText{
-	text-align: center
-}
-.gallery{
-	position: absolute;
-	display: flex;
-	flex-wrap: wrap;
-	top: 440px;
-}
-.picture{
-	width: 25%;
-}
-.pageFooter{
-	position: absolute;
-	top: 120%;
-	width: 100%;
-	padding: 1cm;
-	background-color: rgba(0,0,135,1);
-	font-color: white;
-	background: linear-gradient(red, yellow);
-}
-.button:hover{
-	color: orange;
-}
-.button:active{
-	color: purple;
-}
-.fullscreen{
-	background-image: url("up.png");
-	height: 100vh;
-	display: flex;
-	background-size: cover;
-	justify-content: center;
-	align-items: center;
-	font-size: 40px;
-	color: red;
-}
-.fullscreen:active{
-	background-image: url("surprise.png");	
-}
-.secondTitle{
-	animation-name: animate;
-    animation-duration: 1s;
 }
