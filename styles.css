@@ -1,0 +1,134 @@
+@font-face {
+    font-family: 'cabinregular';
+    src: url('cabin-regular-webfont.woff2') format('woff2'),
+         url('cabin-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+.navBar {
+	font-family: 'cabinregular', sans-serif;
+	width:100%;
+	height:100px;
+	background-color: rgb(72, 72, 72);
+	padding-left:30px;
+	padding-right:30px;
+	box-sizing: border-box;
+}
+.navTabs {
+	height:100%;
+	position:absolute;
+}
+.navTab {
+	color: white;
+	display: inline-block;
+	padding-top: 30px;
+	padding-left: 30px;
+	box-sizing: border-box;
+}
+#companyIcon {
+	color:white;
+	position:absolute;
+	right:50px;
+	line-height: 50px;
+	font-size: 3em;
+}
+.pageHeader {
+	font-family: 'cabinregular', sans-serif;
+	background-color: rgb(200, 200, 200);
+	position: relative;
+	text-align: center;
+}
+.pageTitle {
+	text-align: center;
+	font-size: 30px;
+	padding-top: 15px;
+}
+.pageText {
+	font-size: 15px;
+}
+.headerButton {
+	background-color: rgb(0,200,200);
+	font-size: 15px;
+	padding:5px;
+	box-shadow: 0 2px 10px rgb(100,100,100);
+	margin-bottom: 15px;
+}
+.bodyBox {
+	width: 30%;
+	text-align: center;
+	position: relative;
+	font-size: 5em;
+	top:0.5em;
+}
+.bodyText {
+	font-family: 'cabinregular', sans-serif;
+	font-size: 15px;
+	padding-top: 2em;
+	padding-left: 30%;
+	padding-right: 30%;
+}
+.bodyButton {
+	font-size: 15px;
+	padding:5px;
+	margin-bottom: 15px;
+}
+
+.myTopnav{
+	list-style-type: none;
+	text-align: right;
+	word-spacing: 2em;
+}
+.paragraphs{
+	background-color: rgba(0,255,255,0.2);
+	position: absolute;
+	font-family: 'Cabin', sans-serif;
+	top:10em;
+}
+.bodyTitle{
+	text-align: center
+}
+.bodyText{
+	text-align: center
+}
+.gallery{
+	position: absolute;
+	display: flex;
+	flex-wrap: wrap;
+	top: 440px;
+}
+.picture{
+	width: 25%;
+}
+.pageFooter{
+	position: absolute;
+	top: 120%;
+	width: 100%;
+	padding: 1cm;
+	background-color: rgba(0,0,135,1);
+	font-color: white;
+	background: linear-gradient(red, yellow);
+}
+.button:hover{
+	color: orange;
+}
+.button:active{
+	color: purple;
+}
+.fullscreen{
+	background-image: url("up.png");
+	height: 100vh;
+	display: flex;
+	background-size: cover;
+	justify-content: center;
+	align-items: center;
+	font-size: 40px;
+	color: red;
+}
+.fullscreen:active{
+	background-image: url("surprise.png");	
+}
+.secondTitle{
+	animation-name: animate;
+    animation-duration: 1s;
+}
