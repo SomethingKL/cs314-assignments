@@ -15,40 +15,60 @@
 			</p>
    		</section>
 		
-		<section>
-			<form>
-				<label>
-					<p>First name</p>
-					<input type="text" name="first" placeholder="Enter your first name">
-				</label>
-
-				<label>
-					<p>Last name</p>
-					<input type="text" name="last" placeholder="Enter your last name">
-				</label>
-
-				<label>
-					<p>Email</p>
-					<input type="text" name="email" placeholder="Enter your email address">
-				</label>
+		<section class="bodyBox">
+			<form name="formInfo" class="formInfo">
+				<br>
+					<label>
+						First name
+						<input type="text" name="first" placeholder="Enter your first name">
+					</label>
+				</br>
+				<br>
+					<label>
+						Last name
+						<input type="text" name="last" placeholder="Enter your last name">
+					</label>
+				</br>
+				<br>
+					<label>
+						Email
+						<input type="text" name="email" placeholder="Enter your email address">
+					</label>
+				</br>
+					
+				<br>
+					<section class="radioButtons">
+						<div class="radioButton">
+							Dog Person
+							<input type="radio" name="person-type" value="DogPerson">
+						</div>
+						<div class="radioButton">
+							Cat Person
+							<input type="radio" name="person-type" value="CatPerson">
+						</div>
+						<div class="radioButton">
+							No Animals
+							<input type="radio" name="person-type" value="NoAnimals">
+						</div>
+					</section
+				</br>
 				
-				<div class="radioButtons">
-					<div class="radioButton">
-						<p>Dog Person</p> <input type="radio" name="person-type" value="DogPerson">
-					</div>
-					<div class="radioButton">
-						<p>Cat Person</p> <input type="radio" name="person-type" value="CatPerson">
-					</div>
-					<div class="radioButton">
-						<p>No Animals</p> <input type="radio" name="person-type" value="NoAnimals">
-					</div>
-				</div>
+				<br>
+					<label>
+						About You
+						<textarea name="about" placeholder="Tell me a fun fact about yourself!"></textarea>
+					</label>
+				</br>
 				
-				<label>
-					<p>About You</p>
-					<textarea name="about" placeholder="Tell me a fun fact about yourself!"></textarea>
-				</label>
-            </div>
+				<br>
+					Favorite Season
+					<select name="season">
+						<option value="Winter">Winter</option>
+						<option value="Spring">Spring</option>
+						<option value="Summer">Summer</option>
+						<option value="Fall">Fall</option>
+					</select>
+				</br>
 			</form>
 		</section>
 	</body>

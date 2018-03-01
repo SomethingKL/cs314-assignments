@@ -22,41 +22,60 @@
 	padding-bottom: 24px;
 }
 .radioButtons {
+	width: 100%;
 	margin-bottom: 15px;
 }
 .radioButton {
+	width: 33%;
 	float: left;
-}
-.headerButton:hover {
-	background-color: rgb(200,0,0);
 }
 .bodyBox {
 	font-family: 'cabinregular', sans-serif;
-	width: 33%;
+	position: relative;
 	text-align: center;
-	display: inline-block;
-	top:0.5em;
+	padding:0.5em;
+}
+.formInfo {
+	padding:0.5em;
+	position: relative;
+	width: 100%;
+	margin: auto;
+	max-width: 500px;
+	text-align: left;
 	box-sizing: border-box;
 }
-#bodyIcon {
-	font-size: 5em;
-	margin-top: 15px;
-}
-.bodyText {
-	font-family: 'cabinregular', sans-serif;
+.formInfo input {
+	width: 100%;
+	box-sizing: border-box;
+	border-radius: 5px;
+	padding: 0.5em;
+	border: 2px solid lightcoral;
 	font-size: 15px;
-	padding-top: 2em;
-	padding-left: 30%;
-	padding-right: 30%;
 }
-.bodyButton {
+.formInfo input::placeholder {
+	color: lightcoral;
+}
+.formInfo input:focus {
+	border-color: red;
+}
+.formInfo textarea {
+	resize: none;
+	width: 100%;
+	box-sizing: border-box;
+	height: 110px;
+	border-radius: 5px;
+	padding: 0.5em;
 	font-size: 15px;
-	padding:5px;
-	margin-bottom: 15px;
+	border: 2px solid lightcoral;
 }
-.bodyButton:hover {
-	background-color: rgb(56, 56, 56);
-	color:red;
+.formInfo textarea::placeholder {
+	color: lightcoral;
+}
+.formInfo select {
+	box-sizing: border-box;
+	border-radius: 5px;
+	border: 2px solid lightcoral;
+	width: 100%;
 }
 @media only screen and (max-width: 768px) {
     .bodyBox {
