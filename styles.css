@@ -77,6 +77,17 @@
 	border: 2px solid lightcoral;
 	width: 100%;
 }
+.formInfo input[type="submit"] {
+	box-sizing: border-box;
+	margin-left: 25%;
+	margin-top: 10px;
+	border-radius: 5px;
+	border: 2px solid lightcoral;
+	width: 50%;
+}
+.formInfo input[type="submit"]:hover {
+	background-color: lightcoral;
+}
 @media only screen and (max-width: 768px) {
     .bodyBox {
         width:100%;
