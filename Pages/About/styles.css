@@ -33,6 +33,7 @@ body, html {
 	position: absolute;
 	left: 20%;
 	top: 26%;
+	right: 10px;
 	font-size: 26px;
 	text-align: center;
 }
@@ -44,21 +45,52 @@ body, html {
 	padding: 0;
 	margin-right: 20px;
 	border: none;
+	width: 100%;
+	background-color: gray;
+	
 
     background-position: right;
     background-repeat: no-repeat;
 }
 .carta_title {
 	position: absolute;
-	right: 70%;
+	left: 10%;
 	top: 41%;
 	font-size: 40px;
 	color: tomato;
 }
 .carta_body {
 	position: absolute;
-	right: 28%;
+	right: 300px;
+	left: 20px;
 	top: 50%;
+	font-size: 20px;
+	text-align: center;
+}
+
+.mc {
+    background-image: url("../../Assets/mc_logo.png");
+
+    height: 200px;
+	padding: 0;
+	margin-right: 20px;
+	border: none;
+
+    background-position: left;
+    background-repeat: no-repeat;
+}
+.mc_title {
+	position: absolute;
+	left: 70%;
+	top: 67%;
+	font-size: 40px;
+	color: tomato;
+}
+.mc_body {
+	position: absolute;
+	left: 300px;
+	top: 74%;
+	right: 23px;
 	font-size: 20px;
 	text-align: center;
 }
@@ -99,6 +131,20 @@ body, html {
 		opacity: 0;
 	}
 	.carta_body {
+		opacity: 0;
+	}
+	.mc_body {
+		opacity: 0;
+	}
+}
+@media only screen and (max-width: 768px) {
+	.page_title {
+		opacity: 0;
+	}
+	.carta_title {
+		opacity: 0;
+	}
+	.mc_title {
 		opacity: 0;
 	}
 }
