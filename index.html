@@ -1,66 +1,77 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8" name="html-css-2">
+		<meta charset="utf-8" name="html-form">
 		<meta name="viewport" content="width=device-width,initial-scale=1">
-		<title>Assignment4</title>
-		<link rel="reset" href="reset.css">
+		<title>Assignment5</title>
+		<link rel="stylesheet" href="reset.css">
     	<link rel="stylesheet" href="styles.css">
-    	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 	</head>
 	<body>
-		<section class="navBar">
-			<div class "navTabs">
-				<a class="navTab" href="http://www.google.com">Home</a>
-				<a class="navTab" href="http://www.google.com">About</a>
-				<a class="navTab" href="http://www.google.com">Contact</a>
-			</div>
-			<i class="fab fa-optin-monster" id="companyIcon"></i>
-		</section>
-		
 		<section class="pageHeader">
-   			<h1 class="pageTitle">Opt-in Monster</h1>
+   			<h1 class="pageTitle">HI THERE!</h1>
    			<p class= "pageText">
-				A monster is a creature that produces fear or physical harm by its appearance or its actions.
-				Derived from the Latin monstrum, the word usually connotes something wrong or evil;
-				a monster is generally morally objectionable, physically or psychologically hideous, or a freak of nature.
-				They are usually composites of different creatures, or hybrids of humans and animals,
-				but the term can also be applied figuratively to describe someone with similar characteristics,
-				such as a person who does cruel or horrific things.
+				Tell me a little about yourself.
 			</p>
-   			<button class="headerButton">Meet your monster!</button>
    		</section>
 		
-		<section class="boxSection">
-   			<section class="bodyBox">
-   				<i class="fab fa-linux" id="bodyIcon"></i>
-   				<p class="boxText">
-					The development of Linux is one of the most prominent examples of free and
-					open-source software collaboration. The underlying source code may be used,
-					modified and distributed—commercially or non-commercially—by anyone under the terms of its respective licenses,
-					such as the GNU General Public License.
-				</p>
-   				<button class="bodyButton">View More</button>
-   			</section>
-
-   			<section class="bodyBox">
-   				<i class="fab fa-jenkins" id="bodyIcon"></i>
-   				<p class="boxText">
-					Jenkins is an open source automation server written in Java.
-					Jenkins helps to automate the non-human part of software development process,
-					with continuous integration and facilitating technical aspects of continuous delivery.
-				</p>
-   				<button class="bodyButton">View More</button>
-   			</section>
-
-   			<section class="bodyBox">
-				<i class="fab fa-grunt" id="bodyIcon"></i>
-   				<p class="boxText">
-					Grunt is a JavaScript task runner, a tool used to automatically perform frequent tasks such as minification,
-					compilation, unit testing, and linting. It uses a command-line interface to run custom tasks defined in a file (known as a Gruntfile).
-				</p>
-   				<button class="bodyButton">View More</button>
-   			</section>
-   		</section>
+		<section class="bodyBox">
+			<form name="formInfo" class="formInfo">
+				<br>
+					<label>
+						First name
+						<input type="text" name="first" placeholder="Enter your first name">
+					</label>
+				</br>
+				<br>
+					<label>
+						Last name
+						<input type="text" name="last" placeholder="Enter your last name">
+					</label>
+				</br>
+				<br>
+					<label>
+						Email
+						<input type="text" name="email" placeholder="Enter your email address">
+					</label>
+				</br>
+					
+				<br>
+					<section class="radioButtons">
+						<div class="radioButton">
+							Dog Person
+							<input type="radio" name="person-type" value="DogPerson">
+						</div>
+						<div class="radioButton">
+							Cat Person
+							<input type="radio" name="person-type" value="CatPerson">
+						</div>
+						<div class="radioButton">
+							No Animals
+							<input type="radio" name="person-type" value="NoAnimals">
+						</div>
+					</section
+				</br>
+				
+				<br>
+					<label>
+						About You
+						<textarea name="about" placeholder="Tell me a fun fact about yourself!"></textarea>
+					</label>
+				</br>
+				
+				<br>
+					Favorite Season
+					<select name="season">
+						<option value="Winter">Winter</option>
+						<option value="Spring">Spring</option>
+						<option value="Summer">Summer</option>
+						<option value="Fall">Fall</option>
+					</select>
+				</br>
+				
+				<input type="submit" value="Submit"/>
+			</form>
+		</section>
 	</body>
 </html>
