@@ -6,10 +6,54 @@
     font-style: normal;
 
 }
+body, html {
+	font-family: 'cabinregular', sans-serif;
+	height: 100%;
+	width : 100%;
+}
+.cover {
+    background-image: url("../../Assets/cover.jpg");
+
+    height: 100%; 
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	border: none;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	background-attachment: fixed;
+}
+.page_title {
+	position: fixed;
+	left: 50%;
+	font-size: 60px;
+	color: lime;
+}
+.title_body {
+	position: relative;
+	margin: 10px;
+	font-size: 30px;
+	text-align: center;
+}
+.profile {
+	position: relative;
+	background-image: url("../../Assets/profile.jpg");
+	height: 60px;
+	float: right;
+	background-position: center;
+    background-repeat: no-repeat;
+}
+.profile_text {
+	position: relative;
+	margin: 20px;
+}
+
 .navBar {
 	font-family: 'cabinregular', sans-serif;
 	width:100%;
-	height:100px;
+	height:70px;
 	background-color: rgb(72, 72, 72);
 	padding-left:30px;
 	padding-right:30px;
@@ -32,58 +76,6 @@
 	right:50px;
 	line-height: 50px;
 	font-size: 3em;
-}
-.pageHeader {
-	font-family: 'cabinregular', sans-serif;
-	background-color: rgb(194, 194, 194);
-	position: relative;
-	text-align: center;
-}
-.pageTitle {
-	text-align: center;
-	font-size: 30px;
-	padding-top: 15px;
-}
-.pageText {
-	font-size: 15px;
-}
-.headerButton {
-	background-color: rgb(0,200,200);
-	font-size: 15px;
-	padding:5px;
-	box-shadow: 0 2px 10px rgb(100,100,100);
-	margin-bottom: 15px;
-}
-.headerButton:hover {
-	background-color: rgb(200,0,0);
-}
-.bodyBox {
-	font-family: 'cabinregular', sans-serif;
-	width: 33%;
-	text-align: center;
-	display: inline-block;
-	top:0.5em;
-	box-sizing: border-box;
-}
-#bodyIcon {
-	font-size: 5em;
-	margin-top: 15px;
-}
-.bodyText {
-	font-family: 'cabinregular', sans-serif;
-	font-size: 15px;
-	padding-top: 2em;
-	padding-left: 30%;
-	padding-right: 30%;
-}
-.bodyButton {
-	font-size: 15px;
-	padding:5px;
-	margin-bottom: 15px;
-}
-.bodyButton:hover {
-	background-color: rgb(56, 56, 56);
-	color:red;
 }
 @media only screen and (max-width: 768px) {
     .bodyBox {
