@@ -41,7 +41,7 @@ body, html {
 .navBar {
 	font-family: 'cabinregular', sans-serif;
 	width:100%;
-	height:70px;
+	height:100px;
 	background-color: rgb(72, 72, 72);
 	padding-left:30px;
 	padding-right:30px;
@@ -59,7 +59,7 @@ body, html {
 	box-sizing: border-box;
 }
 .navTab:hover {
-	color: darkslateblue;
+	color: aqua;
 }
 .bodyBox {
 	font-family: 'cabinregular', sans-serif;
@@ -117,7 +117,7 @@ body, html {
 }
 
 #companyIcon {
-	color:darkslateblue;
+	color:aqua;
 	position:absolute;
 	right:50px;
 	line-height: 50px;
