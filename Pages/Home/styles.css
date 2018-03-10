@@ -28,6 +28,7 @@ body, html {
 .page_title {
 	position: fixed;
 	left: 50%;
+	top: 13%;
 	font-size: 60px;
 	color: lime;
 }
@@ -36,14 +37,6 @@ body, html {
 	margin: 10px;
 	font-size: 30px;
 	text-align: center;
-}
-.profile {
-	position: relative;
-	background-image: url("../../Assets/profile.jpg");
-	height: 60px;
-	float: right;
-	background-position: center;
-    background-repeat: no-repeat;
 }
 .profile_text {
 	position: relative;
