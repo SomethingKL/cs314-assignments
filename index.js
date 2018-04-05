@@ -1,5 +1,5 @@
 // Ross Brandt
-alert(ingredients());
+alert(upperLower());
 
 // prompt the user for a string
 // then swap the first and last letter
@@ -46,6 +46,16 @@ function ingredients(){
 	let items = ask(msg);
 	return `Tonights meal consists of '${items[0]}' grilled with '${items[1]}' and '${items[2]}' for dessert.`; 
 }
+// either upper case or lower case
+function upperLower(){
+	let response;
+	while((response = prompt("Enter something.")) == "");
+	if(!response) return null;
+	
+	return (response.length < 3) ? response.toUpperCase() :
+	response.substring(0,3).toLowerCase() + response.substring(3);
+}
+
 
 // Question 4
 function step4(){
