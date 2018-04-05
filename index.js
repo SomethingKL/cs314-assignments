@@ -73,3 +73,14 @@ function numbers(){
 	list[list.length-1] = a;
 	return list;
 }
+function longest(){
+	let msg = "Provide three words separated by commas."
+	
+	let items = ask(msg);
+	let longest = items[0];
+	if(items[1].length > longest.length)
+		longest = items[1];
+	if(items[2].length > longest.length)
+		longest = items[2];
+	return longest;
+}
