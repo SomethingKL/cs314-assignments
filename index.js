@@ -1,7 +1,8 @@
 // Ross Brandt
-alert(charSwap());
+alert(lastThree());
 
-// prompt for the user for a string
+// prompt the user for a string
+// then swap the first and last letter
 function charSwap(){
 	let response;
 	while((response = prompt("Enter something.")) == "");
@@ -9,6 +10,25 @@ function charSwap(){
 	
 	let last = response.length-1;
 	return response[last] + response.substring(1,last) + response[0];
+}
+// prompt the user for a string
+// then if not already there add 'Hi' to the front
+function appendHi(){
+	let response;
+	while((response = prompt("Enter something.")) == "");
+	if(!response) return null;
+	
+	return (response.startsWith("Hi")) ? response : "Hi" + response;
+}
+// prompt the user for a string
+// take the last three characters and put them at front
+function lastThree(){
+	let response;
+	while((response = prompt("Enter something with 3 characters.")).length < 3);
+	if(!response) return null;
+	
+	let pivot = response.length-3;
+	return response.substring(pivot) + response.substring(0,pivot);
 }
 
 
