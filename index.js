@@ -67,5 +67,9 @@ function nums(){
 	else return list;
 }
 function numbers(){
-	return nums();
+	let list = nums();
+	let a = list[0];
+	list[0] = list[list.length-1];
+	list[list.length-1] = a;
+	return list;
 }
