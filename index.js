@@ -32,6 +32,7 @@ function lastThree(){
 }
 // prompt the user for a list of items separated by commas
 function ask(msg){
+	let response;
 	while((response = prompt(msg)).length < 2);
 	if(!response) return null;
 	
@@ -54,6 +55,19 @@ function upperLower(){
 	
 	return (response.length < 3) ? response.toUpperCase() :
 	response.substring(0,3).toLowerCase() + response.substring(3);
+}
+// array of numbers
+function nums(){
+	let response;
+	while((response = prompt("Enter numbers separated by commas.")) == "");
+	if(!response) return null;
+	
+	let list = response.split(",");
+	if(list.length < 2) return ask(msg);
+	else return list;
+}
+function numbers(){
+	return nums();
 }
 
 
