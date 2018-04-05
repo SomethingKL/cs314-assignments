@@ -1,5 +1,5 @@
 // Ross Brandt
-alert(lastThree());
+alert(ingredients());
 
 // prompt the user for a string
 // then swap the first and last letter
@@ -20,8 +20,8 @@ function appendHi(){
 	
 	return (response.startsWith("Hi")) ? response : "Hi" + response;
 }
-// prompt the user for a string
-// take the last three characters and put them at front
+// prompt the user for a string of at least 3 characters
+// take the last three characters and put them in front
 function lastThree(){
 	let response;
 	while((response = prompt("Enter something with 3 characters.")).length < 3);
@@ -30,7 +30,22 @@ function lastThree(){
 	let pivot = response.length-3;
 	return response.substring(pivot) + response.substring(0,pivot);
 }
-
+// prompt the user for a list of items separated by commas
+function ask(msg){
+	while((response = prompt(msg)).length < 2);
+	if(!response) return null;
+	
+	let list = response.split(",");
+	if(list.length != 3) return ask(msg);
+	else return list;
+}
+// list of ingredients
+function ingredients(){
+	let msg = "Provide three of you favorite ingredients. (ex. a, b, c)"
+	
+	let items = ask(msg);
+	return `Tonights meal consists of '${items[0]}' grilled with '${items[1]}' and '${items[2]}' for dessert.`; 
+}
 
 // Question 4
 function step4(){
