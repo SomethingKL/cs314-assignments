@@ -1,8 +1,16 @@
 // Ross Brandt
-step4();
-step5();
-step7();
-step11();
+alert(charSwap());
+
+// prompt for the user for a string
+function charSwap(){
+	let response;
+	while((response = prompt("Enter something.")) == "");
+	if(!response) return null;
+	
+	let last = response.length-1;
+	return response[last] + response.substring(1,last) + response[0];
+}
+
 
 // Question 4
 function step4(){
@@ -58,20 +66,5 @@ function step11(){
 	console.log("email ", clone.email("zagmail.gonzaga.edu"));
 }
 
-// Question 15
-function step15(first, second, third = ""){
-	return first + second + third;
-}
-
-// Question 16
-let step16 = function(first, second, third = ""){
-	return first + second + third;
-}
-
 // Question 17
 let step17 = (first, second, third = "") => {return first + second + third;}
-
-// Questions 15 - 17
-console.log("declaration ", step15("Neither", "Here", "NorThere"));
-console.log("expression ", step16("Neither", "Here", "NorThere"));
-console.log("lambda ", step17("Neither", "Here", "NorThere"));
