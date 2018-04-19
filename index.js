@@ -56,8 +56,8 @@ submit.forEach(function(event){
 });
 
 // four
-let remover = document.getElementById('removeList');
-romover.addEventListener('click', function RemoveListEntry(event){
-	let list = document.getElementById('toRemove');
-	list.removeChild(event.target);
+let remover = document.getElementById('toRemove');
+romover.addEventListener ('click', function RemoveListEntry(event){
+	let list = document.getElementById ('toRemove');
+	list.removeChild (event.target);
 });
