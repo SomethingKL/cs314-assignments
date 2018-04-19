@@ -45,11 +45,19 @@ toggle.forEach(function(element){
 // three
 let listAdder = document.getElementById('three').getElementsByTagName('button');
 let submit = Array.prototype.slice.call(listAdder);
-submit.forEach(function(element){
+submit.forEach(function(event){
 	element.addEventListener('click', function(){
 		let newText= document.getElementById('newText').value;
 		let listEntry = document.createElement('li');
+		
 		listEntry.innerText = newText;
-		document.getElementById('addlist').appendChild(listEntry);
+		document.getElementById('toAdd').appendChild(listEntry);
 	});
+});
+
+// four
+let remover = document.getElementById('removeList');
+romover.addEventListener('click', function RemoveListEntry(event){
+	let list = document.getElementById('toRemove');
+	list.removeChild(event.target);
 });
