@@ -45,7 +45,7 @@ toggle.forEach(function(element){
 // three
 let listAdder = document.getElementById('three').getElementsByTagName('button');
 let submit = Array.prototype.slice.call(listAdder);
-submit.forEach(function(event){
+submit.forEach(function(element){
 	element.addEventListener('click', function(){
 		let newText= document.getElementById('newText').value;
 		let listEntry = document.createElement('li');
@@ -56,8 +56,11 @@ submit.forEach(function(event){
 });
 
 // four
-let remover = document.getElementById('toRemove');
-romover.addEventListener ('click', function RemoveListEntry(event){
-	let list = document.getElementById ('toRemove');
-	list.removeChild (event.target);
+let listRemover = document.getElementById('four').getElementsByTagName('button');
+let remover = Array.prototype.slice.call(listRemover);
+submit.forEach(function(element){
+	element.addEventListener('click', function(event){
+		let list = document.getElementById ('toRemove');
+		list.removeChild (event.target);
+	});
 });
