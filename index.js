@@ -32,7 +32,7 @@ let generateUser = (user) => {
 	userSection.append(userName);
 	userEmail.innerHTML = user.email;
 	userSection.append(userEmail);
-	userCompany.innerHTML = user.company.name;
+	userCompany.innerHTML = user.company;
 	userSection.append(userCompany);
 
 	// add button elements
@@ -40,25 +40,26 @@ let generateUser = (user) => {
 	userButtons.className = "userButtons";
 
 	// todo button
-	let todoButton = document.createElement("div");
+	let todoButton = document.createElement("button");
 	todoButton.className = "button";
 	todoButton.innerHTML = "Show Todos";
-	todoButton.setAttribute("loaded", false);
-	todoButton.click(() => {
-		if(!$(todoButton).attr("loaded")){
+	todoButton.setAttribute("notLoaded", true);
+	todoButton.onclick = () => {
+		if($(todoButton).attr("notLoaded")){
 			$.get(`https://jsonplaceholder.typicode.com/todos?userId=${user.id}`)
 			 .done((data) => {
-				$(todoContainer).slideToggle();
+				$(userButtons).slideToggle();
 				loadTodos(data, user.id);
-				$(todoContainer).slideToggle();
+				$(userButtons).slideToggle();
 			})
 			.fail(() => {
 				console.log("failed");
 			});
 		} else {
-			
+			todoButton.setAttribute("notLoaded", false);
+			console.log("test");
 		}
-	});
+	};
 	userButtons.append(todoButton);
 	
 	// albums button
@@ -98,7 +99,6 @@ function loadTodos(data, userID) {
 	
 	let todosHeader = document.createElement("h5");
 	todosHeader.innerHTML = "Todos:";
-	todosContainer.append(todosHeader);
 
 	for (let todo of data){
 		let todoItem = document.createElement("div");
