@@ -58,6 +58,7 @@ let generateUser = (user) => {
 			});
 		} else {
 			$(`#todoList${user.id}`).toggle();
+			$(`#albumList${user.id}`).hide();
 		}
 	};
 	userButtons.append(todoButton);
@@ -81,6 +82,7 @@ let generateUser = (user) => {
 			});
 		} else {
 			$(`#albumList${user.id}`).toggle();
+			$(`#todoList${user.id}`).hide();
 		}
 	};
 	userButtons.append(albumButton);
