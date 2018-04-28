@@ -1,0 +1,28 @@
+#header {
+  font-size: 80px;
+  top: 0px;
+  left: 0px;
+  padding: 15px;
+  box-sizing: border-box;
+  background-color: coral;
+  width: 100%;
+  text-align: center;
+}
+
+#users {
+  position: relative;
+  top: 150px;
+}
+
+.userSection {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  margin: 20px 100px 10px 100px;
+  padding: 20px;
+}
+
+.user h5 {
+  font-size: 1.5em;
+  padding: 20px 0px 30px;
+}

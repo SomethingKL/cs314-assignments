@@ -1,86 +1,115 @@
 // Ross Brandt
-alert(upperLower());
 
-// prompt the user for a string
-// then swap the first and last letter
-function charSwap(){
-	let response;
-	while((response = prompt("Enter something.")) == "");
-	if(!response) return null;
+// get the data from the users section of jsonplaceholder
+$.get('https://jsonplaceholder.typicode.com/users')
+ .done((data) => populateUsers(data))
+ .fail(() => {});
+
+// for each user get information and display
+let populateUsers = (users) => users.forEach(
+	(user) => $('#users').append(
+		generateUser({
+			id        : user.id,
+			name      : user.name,
+			email     : user.email,
+			company   : user.company.name
+		})
+	)
+);
+
+// generate all the user elements within a div
+let generateUser = (user) => {
+	// create user elements
+	let userSection = document.createElement("div");
+	let userName = document.createElement("h4");
+	let userEmail = document.createElement("p");
+	let userCompany = document.createElement("p");
+
+	// populate user info
+	userSection.className = "userSection";
+	userSection.setAttribute('id', `user${user.id}`);
+	userName.innerHTML = user.name;
+	userSection.append(userName);
+	userEmail.innerHTML = user.email;
+	userSection.append(userEmail);
+	userCompany.innerHTML = user.company.name;
+	userSection.append(userCompany);
+
+	// add button elements
+	let userButtons = document.createElement("div");
+	userButtons.className = "userButtons";
+
+	// todo button
+	let todoButton = document.createElement("div");
+	todoButton.className = "button";
+	todoButton.innerHTML = "Show Todos";
+	todoButton.setAttribute("loaded", false);
+	todoButton.click(() => {
+		if(!$(todoButton).attr("loaded")){
+			$.get(`https://jsonplaceholder.typicode.com/todos?userId=${user.id}`)
+			 .done((data) => {
+				$(todoContainer).slideToggle();
+				loadTodos(data, user.id);
+				$(todoContainer).slideToggle();
+			})
+			.fail(() => {
+				console.log("failed");
+			});
+		} else {
+			
+		}
+	});
+	userButtons.append(todoButton);
 	
-	let last = response.length-1;
-	return response[last] + response.substring(1,last) + response[0];
-}
-// prompt the user for a string
-// then if not already there add 'Hi' to the front
-function appendHi(){
-	let response;
-	while((response = prompt("Enter something.")) == "");
-	if(!response) return null;
+	// albums button
+	/*let todoButton = document.createElement("div");
+	todoButton.className = "button";
+	todoButton.innerHTML = "Show Todos";
+	todoButton.setAttribute("loaded", false);
+	todoButton.click(() => {
+		if(!$(todoButton).attr("loaded")){
+			$.get(`https://jsonplaceholder.typicode.com/todos?userId=${user.id}`)
+			 .done((data) => {
+				$(todoContainer).slideToggle();
+				loadTodos(data, user.id);
+				$(todoContainer).slideToggle();
+			})
+			.fail(() => {
+				console.log("failed");
+			});
+		} else {
+			
+		}
+	});*/
+	//userButtons.append(todoButton);
 	
-	return (response.startsWith("Hi")) ? response : "Hi" + response;
+	userSection.append(userButtons);
+
+	$("#users").append(userSection);
+	return user;
 }
-// prompt the user for a string of at least 3 characters
-// take the last three characters and put them in front
-function lastThree(){
-	let response;
-	while((response = prompt("Enter something with 3 characters.")).length < 3);
-	if(!response) return null;
+
+// load the todos into a container
+function loadTodos(data, userID) {
+	let todoList = document.createElement("div");
 	
-	let pivot = response.length-3;
-	return response.substring(pivot) + response.substring(0,pivot);
-}
-// prompt the user for a list of items separated by commas
-function ask(msg){
-	let response;
-	while((response = prompt(msg)).length < 2);
-	if(!response) return null;
+	todoList.className = "todoList";
+	todoList.id = `todosList${userID}`;
 	
-	let list = response.split(",");
-	if(list.length != 3) return ask(msg);
-	else return list;
-}
-// list of ingredients
-function ingredients(){
-	let msg = "Provide three of you favorite ingredients. (ex. a, b, c)"
-	
-	let items = ask(msg);
-	return `Tonights meal consists of '${items[0]}' grilled with '${items[1]}' and '${items[2]}' for dessert.`; 
-}
-// either upper case or lower case
-function upperLower(){
-	let response;
-	while((response = prompt("Enter something.")) == "");
-	if(!response) return null;
-	
-	return (response.length < 3) ? response.toUpperCase() :
-	response.substring(0,3).toLowerCase() + response.substring(3);
-}
-// array of numbers
-function nums(){
-	let response;
-	while((response = prompt("Enter numbers separated by commas.")) == "");
-	if(!response) return null;
-	
-	let list = response.split(",");
-	if(list.length < 2) return ask(msg);
-	else return list;
-}
-function numbers(){
-	let list = nums();
-	let a = list[0];
-	list[0] = list[list.length-1];
-	list[list.length-1] = a;
-	return list;
-}
-function longest(){
-	let msg = "Provide three words separated by commas."
-	
-	let items = ask(msg);
-	let longest = items[0];
-	if(items[1].length > longest.length)
-		longest = items[1];
-	if(items[2].length > longest.length)
-		longest = items[2];
-	return longest;
+	let todosHeader = document.createElement("h5");
+	todosHeader.innerHTML = "Todos:";
+	todosContainer.append(todosHeader);
+
+	for (let todo of data){
+		let todoItem = document.createElement("div");
+		todoItem.className="todoItem";
+		if (todo.completed === true){
+			todoItem.innerHTML=`<i class="far fa-check-square" style="margin-right:5px;"></i>${todo.title}`;
+		} else {
+			todoItem.innerHTML=`<i class="far fa-square" style="margin-right:5px;"></i>${todo.title}`;
+		}
+
+		todoList.append(todoItem);
+	}
+	$(`#user${userID}`).append(todoList);
 }
