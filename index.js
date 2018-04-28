@@ -48,6 +48,7 @@ let generateUser = (user) => {
 		if($(todoButton).attr("notLoaded")){
 			$.get(`https://jsonplaceholder.typicode.com/todos?userId=${user.id}`)
 			 .done((data) => {
+				todoButton.setAttribute("notLoaded", false);
 				$(userButtons).slideToggle();
 				loadTodos(data, user.id);
 				$(userButtons).slideToggle();
@@ -56,7 +57,6 @@ let generateUser = (user) => {
 				console.log("failed");
 			});
 		} else {
-			todoButton.setAttribute("notLoaded", false);
 			$(`#todoList${user.id}`).toggle();
 		}
 	};
@@ -71,6 +71,7 @@ let generateUser = (user) => {
 		if($(albumButton).attr("notLoaded")){
 			$.get(`https://jsonplaceholder.typicode.com/todos?userId=${user.id}`)
 			 .done((data) => {
+				albumButton.setAttribute("notLoaded", false);
 				$(userButtons).slideToggle();
 				loadAlbums(data, user.id);
 				$(userButtons).slideToggle();
@@ -79,7 +80,6 @@ let generateUser = (user) => {
 				console.log("failed");
 			});
 		} else {
-			albumButton.setAttribute("notLoaded", false);
 			$(`#albumList${user.id}`).toggle();
 		}
 	};
