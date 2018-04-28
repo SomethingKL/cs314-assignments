@@ -57,32 +57,33 @@ let generateUser = (user) => {
 			});
 		} else {
 			todoButton.setAttribute("notLoaded", false);
-			console.log("test");
+			$(`#todoList${user.id}`).toggle();
 		}
 	};
 	userButtons.append(todoButton);
 	
 	// albums button
-	/*let todoButton = document.createElement("div");
-	todoButton.className = "button";
-	todoButton.innerHTML = "Show Todos";
-	todoButton.setAttribute("loaded", false);
-	todoButton.click(() => {
-		if(!$(todoButton).attr("loaded")){
+	let albumButton = document.createElement("button");
+	albumButton.className = "button";
+	albumButton.innerHTML = "Show Albums";
+	albumButton.setAttribute("notLoaded", true);
+	albumButton.onclick = () => {
+		if($(albumButton).attr("notLoaded")){
 			$.get(`https://jsonplaceholder.typicode.com/todos?userId=${user.id}`)
 			 .done((data) => {
-				$(todoContainer).slideToggle();
-				loadTodos(data, user.id);
-				$(todoContainer).slideToggle();
+				$(userButtons).slideToggle();
+				loadAlbums(data, user.id);
+				$(userButtons).slideToggle();
 			})
 			.fail(() => {
 				console.log("failed");
 			});
 		} else {
-			
+			albumButton.setAttribute("notLoaded", false);
+			$(`#albumList${user.id}`).toggle();
 		}
-	});*/
-	//userButtons.append(todoButton);
+	};
+	userButtons.append(albumButton);
 	
 	userSection.append(userButtons);
 
@@ -112,4 +113,24 @@ function loadTodos(data, userID) {
 		todoList.append(todoItem);
 	}
 	$(`#user${userID}`).append(todoList);
+}
+
+// load the albums into a container
+function loadAlbums(data, userID) {
+	let albumList = document.createElement("div");
+	
+	albumList.className = "albumList";
+	albumList.id = `albumList${userID}`;
+	
+	let AlbumHeader = document.createElement("h5");
+	AlbumHeader.innerHTML = "Todos:";
+
+	for (let album of data){
+		let albumItem = document.createElement("div");
+		albumItem.className="albumItem";
+		albumItem.innerHTML=`- ${album.title}`;
+
+		albumList.append(albumItem);
+	}
+	$(`#user${userID}`).append(albumList);
 }
