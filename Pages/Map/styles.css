@@ -1,0 +1,127 @@
+@font-face {
+    font-family: 'cabinregular';
+    src: url('cabin-regular-webfont.woff2') format('woff2'),
+         url('cabin-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+body, html {
+	font-family: 'cabinregular', sans-serif;
+	height: 100%;
+}
+
+.profile {
+    background-image: url("../../Assets/profile.jpg");
+
+    height: 200px;
+	padding: 0;
+	margin: 0;
+	border: none;
+
+    background-position: left;
+    background-repeat: no-repeat;
+}
+.page_title {
+	position: absolute;
+	left: 50%;
+	top: 13%;
+	font-size: 60px;
+	color: tomato;
+}
+.title_body {
+	position: absolute;
+	left: 20%;
+	top: 26%;
+	right: 10px;
+	font-size: 26px;
+	text-align: center;
+}
+
+.navBar {
+	font-family: 'cabinregular', sans-serif;
+	width:100%;
+	height:100px;
+	background-color: rgb(72, 72, 72);
+	padding-left:30px;
+	padding-right:30px;
+	box-sizing: border-box;
+}
+.navTabs {
+	height:100%;
+	position:absolute;
+}
+.navTab {
+	color: white;
+	display: inline-block;
+	padding-top: 30px;
+	padding-left: 30px;
+	box-sizing: border-box;
+}
+.navTab:hover {
+	color: aqua;
+}
+.bodyBox {
+	font-family: 'cabinregular', sans-serif;
+	position: relative;
+	text-align: center;
+	padding:0.5em;
+	background-color: gray;
+}
+.formInfo {
+	padding:0.5em;
+	position: relative;
+	width: 100%;
+	margin: auto;
+	max-width: 500px;
+	text-align: left;
+	box-sizing: border-box;
+}
+.formInfo input {
+	width: 100%;
+	box-sizing: border-box;
+	border-radius: 5px;
+	padding: 0.5em;
+	border: 2px solid darkslateblue;
+	font-size: 15px;
+}
+.formInfo input::placeholder {
+	color: darkslateblue;
+}
+.formInfo input:focus {
+	border-color: red;
+}
+.formInfo textarea {
+	resize: none;
+	width: 100%;
+	box-sizing: border-box;
+	height: 110px;
+	border-radius: 5px;
+	padding: 0.5em;
+	font-size: 15px;
+	border: 2px solid darkslateblue;
+}
+.formInfo textarea::placeholder {
+	color: darkslateblue;
+}
+.formInfo input[type="submit"] {
+	box-sizing: border-box;
+	margin-left: 25%;
+	margin-top: 10px;
+	border-radius: 5px;
+	border: 2px solid darkslateblue;
+	width: 50%;
+}
+.formInfo input[type="submit"]:hover {
+	background-color: darkslateblue;
+}
+
+#companyIcon {
+	color:aqua;
+	position:absolute;
+	right:50px;
+	line-height: 50px;
+	font-size: 3em;
+}
+@media only screen and (max-width: 1100px) {
+}
