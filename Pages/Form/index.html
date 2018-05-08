@@ -3,8 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <script src="index.js"></script>
   <title>Final</title>
 </head>
+
 <body>
   <section class="nav-bar">
     <a href="../../index.html">Home</a>
@@ -14,51 +17,47 @@
   </section>
 
   <section class="banner">
-    <h2 class="title">Computer Science Senior Project at Gonzaga University</h2>	
+    <h2 class="title">Questions?</h2>	
     <section class="profile">
-    The Method of Loci is a common practice of memory competitors, seeking to memorize
-    lots of information quickly and effectively. 
-    This technique is more interactive, personal, spatial, and visual than other techniques.
-    This is what makes it so long-term.
-    However, there is a slight catch--not everyone has the ability to visualize a palace to
-    the extent that is needed for The Method of Loci.The solution is to use virtual reality.
-    Here are the technologies Loci is built on.
+    If you have any questions or remarks contact us here.
     </section>
   </section>
 
-  <section class="used">
-    <section class="card">
-      <section class="software">
-        <img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com">
-        <div>
-          <p class="info">Unity3D is a powerful game development engine.
-          Used in creating applications for mobile, desktop, the web and consoles.</p>
-          <button class="more">More Info</button>
-        </div>
-      </section>
-    </section>
+	<section class="used">
+		<form class="formInfo" id="myForm">
+			<br>
+				<label>
+				First name
+				<input type="text" id="first" placeholder="Enter your first name">
+				</label>
+			</br>
 
-    <section class="card">
-      <section class="software">
-        <img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com">
-        <div>
-          <p class="info">SteamVR is a virtual reality system,
-          with a headset built by Valve and partner HTC.</p>
-          <button class="more">More Info</button>
-        </div>
-      </section>
-    </section>
+			<br>
+				<label>
+				Last name
+				<input type="text" id="last" placeholder="Enter your last name">
+				</label>
+			</br>
 
-    <section class="card">
-      <section class="software">
-        <img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com">
-        <div>
-          <p class="info">VRTK is a collection of useful scripts and concepts
-          to aid building VR solutions rapidly and easily in Unity3D 5+.</p>
-          <button class="more">More Info</button>
-        </div>
-      </section>
-    </section>
-  </section>
+			<br>
+				<label>
+				Email
+				<input type="text" id="email" placeholder="Enter your email address">
+				</label>
+			</br>
+
+			<br>
+				<label>
+				Message
+				<textarea id="about" placeholder="Write your message here"></textarea>
+				</label>
+			</br>
+
+			<input type="button" value="Submit" onclick="runChecks()"/>
+		</form>
+	</section>
+  
+	<section class="profile" id="messager">
+	</section>
 </body>
 </html>
