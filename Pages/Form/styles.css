@@ -1,82 +1,102 @@
 .nav-bar {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  height: 40px;
-  background-color: black;
-  overflow: hidden;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	height: 40px;
+	background-color: black;
+	overflow: hidden;
 }
 .nav-bar a {
-  display: block;
-  float: left;
-  padding: 12px 20px;
-  color: white;
-  text-decoration: none;
+	display: block;
+	float: left;
+	padding: 12px 20px;
+	color: white;
+	text-decoration: none;
 }
 .nav-bar a:hover {
-  background-color: green;
+	background-color: green;
 }
+
+.footer {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	height: 40px;
+	background-color: black;
+	overflow: hidden;
+}
+.footer a {
+	display: block;
+	float: right;
+	padding: 12px 20px;
+	color: white;
+	text-decoration: none;
+}
+.footer a:hover {
+	background-color: green;
+}
+
 .banner {
-  width: 100%;
+	width: 100%;
 }
 .title {
-  text-align: center;
+	text-align: center;
 }
 .profile {
-  margin: 16px;
-  text-align: center;
+	margin: 16px;
+	text-align: center;
 }
 .bodyBox {
-  font-family: 'cabinregular', sans-serif;
-  position: relative;
-  text-align: center;
-  padding:0.5em;
-  background-color: gray;
+	font-family: 'cabinregular', sans-serif;
+	position: relative;
+	text-align: center;
+	padding:0.5em;
+	background-color: gray;
 }
 .formInfo {
-  padding:0.5em;
-  position: relative;
-  width: 100%;
-  margin: auto;
-  max-width: 500px;
-  text-align: left;
-  box-sizing: border-box;
+	padding:0.5em;
+	position: relative;
+	width: 100%;
+	margin: auto;
+	max-width: 500px;
+	text-align: left;
+	box-sizing: border-box;
 }
 .formInfo input {
-  width: 100%;
-  box-sizing: border-box;
-  border-radius: 5px;
-  padding: 0.5em;
-  border: 2px solid darkslateblue;
-  font-size: 15px;
+	width: 100%;
+	box-sizing: border-box;
+	border-radius: 5px;
+	padding: 0.5em;
+	border: 2px solid darkslateblue;
+	font-size: 15px;
 }
 .formInfo input::placeholder {
-  color: darkslateblue;
+	color: darkslateblue;
 }
 .formInfo input:focus {
-  border-color: red;
+	border-color: red;
 }
 .formInfo textarea {
-  resize: none;
-  width: 100%;
-  box-sizing: border-box;
-  height: 110px;
-  border-radius: 5px;
-  padding: 0.5em;
-  font-size: 15px;
-  border: 2px solid darkslateblue;
+	resize: none;
+	width: 100%;
+	box-sizing: border-box;
+	height: 110px;
+	border-radius: 5px;
+	padding: 0.5em;
+	font-size: 15px;
+	border: 2px solid darkslateblue;
 }
 .formInfo textarea::placeholder {
-  color: darkslateblue;
+	color: darkslateblue;
 }
 .formInfo input[type="button"] {
-  box-sizing: border-box;
-  margin-left: 25%;
-  margin-top: 10px;
-  border-radius: 5px;
-  border: 2px solid darkslateblue;
-  width: 50%;
+	box-sizing: border-box;
+	margin-left: 25%;
+	margin-top: 10px;
+	border-radius: 5px;
+	border: 2px solid darkslateblue;
+	width: 50%;
 }
 .formInfo input[type="button"]:hover {
-  background-color: darkslateblue;
+	background-color: darkslateblue;
 }
