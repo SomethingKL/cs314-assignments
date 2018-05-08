@@ -36,6 +36,22 @@
 	background-color: green;
 }
 
+.days {
+	height:350px;
+}
+.card {
+	margin-bottom: 20px;
+	float: left;
+	width: 20%;
+}
+.day {
+	margin: 4px;
+	height: 230px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+.name {
+}
+
 .banner {
 	width: 100%;
 }
@@ -45,4 +61,10 @@
 .profile {
 	margin: 16px;
 	text-align: center;
+}
+@media screen and (max-width: 650px) {
+	.card {
+		width: 100%;
+		display: block;
+	}
 }
