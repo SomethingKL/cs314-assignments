@@ -1,0 +1,59 @@
+.nav-bar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  height: 40px;
+  background-color: black;
+  overflow: hidden;
+}
+.nav-bar a {
+  display: block;
+  float: left;
+  padding: 12px 20px;
+  color: white;
+  text-decoration: none;
+}
+.nav-bar a:hover {
+  background-color: green;
+}
+.banner {
+  width: 100%;
+}
+.title {
+  text-align: center;
+}
+.profile {
+  margin: 16px;
+}
+.card {
+  float: left;
+  width: 33%;
+}
+.software {
+  margin: 4px;
+  height: 230px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+.software img {
+  width: 100%;
+  height: 115px;
+}
+.info {
+  margin: 4px;
+  height: 90px;
+}
+.more {
+  width: 100%;
+  height: 30px;
+  color: white;
+  background-color: black;
+}
+.more:hover {
+  filter:invert(100%);
+}
+@media screen and (max-width: 650px) {
+  .card {
+    width: 100%;
+    display: block;
+  }
+}
